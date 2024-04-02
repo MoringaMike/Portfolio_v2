@@ -32,10 +32,11 @@ scrollDownButton.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > navbarOffsetTop) {
-    scroll-down-button.classList.add('hidden');
+    scrollDownButton.classList.add('hidden'); // Added missing "DownButton" to the variable name
   } else {
-    scroll-down-button.classList.remove('hidden');
+    scrollDownButton.classList.remove('hidden'); // Added missing "DownButton" to the variable name
   }
+});
 
 // Smooth Scrolling
 const navLinks = document.querySelectorAll('.navbar-links a');
@@ -54,11 +55,9 @@ const sections = document.querySelectorAll('section');
 
 window.addEventListener('scroll', () => {
   let currentSection = '';
-
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-
     if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
       currentSection = section.getAttribute('id');
     }

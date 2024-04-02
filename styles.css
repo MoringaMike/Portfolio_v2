@@ -117,14 +117,7 @@ nav {
   overflow: hidden;
 }
 
-.hero img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-
-.profile-picture {
+.hero .profile-picture {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -307,7 +300,7 @@ overflow: hidden;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px) {
   .scroll-down-button {
     display: flex;
   }
@@ -381,8 +374,159 @@ footer {
 }
 
 /* Media Queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px) {
   .navbar {
     display: none;
+  }
+}
+
+/* Media Query 1: Small heights */
+@media screen and (max-height: 480px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+
+  .hero-title {
+    font-size: clamp(1rem, 7vw, 2rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.8rem, 3vw, 1.2rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero .profile-picture {
+    width: 100px !important;
+    height: 100px !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+    margin: 0 0.5rem;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Media Query 2: Small widths */
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.8rem, 3vw, 1.2rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero .profile-picture {
+    width: 100px !important;
+    height: 100px !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+    margin: 0 0.5rem;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Media Query 3: Large widths and small heights */
+@media screen and (min-width: 769px) and (max-height: 480px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+
+  .hero-title {
+    font-size: clamp(1rem, 7vw, 2rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .hero .profile-picture {
+    width: 120px !important;
+    height: 120px !important;
+    margin-bottom: 0.8rem;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    margin: 0 0.8rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Media Query 4: Small widths and large heights */
+@media screen and (max-width: 480px) and (min-height: 769px) {
+  .hero-title {
+    font-size: clamp(1.8rem, 7vw, 3rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .hero .profile-picture {
+    width: 120px !important;
+    height: 120px !important;
+    margin-bottom: 0.8rem;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    margin: 0 0.8rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Media Query 5: Large heights and widths */
+@media screen and (min-height: 769px) and (min-width: 769px) {
+  .hero-title {
+    font-size: clamp(2.2rem, 8vw, 4rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.2rem, 4.5vw, 2rem);
+  }
+
+  .hero .profile-picture {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .social-icons a {
+    font-size: 27px;
+    margin: 0 1rem;
+  }
+
+  .cta-button {
+    padding: 1rem 2rem;
   }
 }
