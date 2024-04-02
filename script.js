@@ -24,18 +24,13 @@ handleMediaQueryChange(mediaQuery);
 
 // Scroll Down Button
 const scrollDownButton = document.querySelector('.scroll-down-button');
+const aboutSection = document.querySelector('#about');
 
 scrollDownButton.addEventListener('click', () => {
-  const nextSection = document.querySelector('#about');
-  nextSection.scrollIntoView({ behavior: 'smooth' });
-});
-
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > navbarOffsetTop) {
-    scrollDownButton.classList.add('hidden'); // Added missing "DownButton" to the variable name
-  } else {
-    scrollDownButton.classList.remove('hidden'); // Added missing "DownButton" to the variable name
-  }
+  aboutSection.scrollIntoView({ behavior: 'smooth' });
+  setTimeout(() => {
+    window.location.hash = '#about';
+  }, 500);
 });
 
 // Smooth Scrolling

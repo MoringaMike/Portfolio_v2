@@ -269,7 +269,9 @@ nav {
 
 .scroll-down-button {
   position: absolute;
-  bottom: 5px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: none;
   flex-direction: column;
   align-items: center;
@@ -279,16 +281,11 @@ nav {
   animation: fadeInOut 2s ease-in-out infinite;
   cursor: pointer;
   z-index: 999;
+  transition: left 0.3s ease;
 }
 
 .scroll-down-button i {
-  margin-bottom: 3px;
-}
-
-.scroll-down-button.hidden {
-background-color: rgba(0, 0, 0, 0);
-transition: all 0.3s ease-in-out;
-overflow: hidden;
+  margin-bottom: 5px;
 }
 
 @keyframes fadeInOut {
@@ -303,6 +300,14 @@ overflow: hidden;
 @media screen and (max-width: 810px) {
   .scroll-down-button {
     display: flex;
+  }
+}
+
+@media screen and (max-height: 480px) {
+  .scroll-down-button {
+    left: auto;
+    right: 20px;
+    transform: translateX(0);
   }
 }
 
